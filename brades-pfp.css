@@ -3,9 +3,10 @@
    Personal Finance Portal — Custom Stylesheet
    Applied to: brades.gb.pfp.net (Intelliflo PFP)
    Brand: Built by Entrepreneurs, for Entrepreneurs
+   Updated: class selectors confirmed via browser inspector
    ============================================================ */
 
-/* --- Google Fonts import (web-safe Garamond & sans-serif fallback) --- */
+/* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap');
 
 /* --- Brades Colour Variables --- */
@@ -47,67 +48,105 @@ a:hover {
 }
 
 /* ============================================================
-   HEADER / NAVIGATION BAR
+   HEADER — header.page-masthead
    ============================================================ */
 
-header,
-.header,
-nav,
-.navbar,
-.nav-bar,
-[class*="header"],
-[class*="nav-"] {
+header.page-masthead {
   background-color: var(--brades-near-black) !important;
   border-bottom: 3px solid var(--brades-warm-tan) !important;
 }
 
-header a,
-nav a,
-.navbar a,
-.nav-bar a {
+header.page-masthead a {
   color: var(--brades-off-white) !important;
 }
 
-header a:hover,
-nav a:hover {
+header.page-masthead a:hover {
   color: var(--brades-amber-gold) !important;
+  text-decoration: none !important;
 }
 
 /* ============================================================
-   HERO / MAIN BANNER SECTION
+   MAIN CONTENT AREA — main#content
    ============================================================ */
 
-main,
-.main,
-.hero,
-[class*="hero"],
-.landing,
-.home-content,
-.page-header {
-  background-color: var(--brades-off-white) !important;
+main#content,
+main.flex-fill,
+main.background,
+main.flex-fill.background {
+  background-color: var(--brades-steel-blue) !important;
 }
 
-/* Main page heading ("Personal Finance Portal") */
-main h1,
-.hero h1,
-.landing h1,
-.page-header h1,
-h1.title {
+main#content h1,
+main.flex-fill h1 {
+  color: var(--brades-amber-gold) !important;
   font-family: 'EB Garamond', Garamond, Georgia, serif !important;
-  color: var(--brades-near-black) !important;
   font-weight: 700 !important;
 }
 
+main#content p,
+main.flex-fill p {
+  color: var(--brades-off-white) !important;
+}
+
 /* ============================================================
-   BUTTONS — PRIMARY (Login, Register, CTA)
+   BORDER DIVIDER
+   ============================================================ */
+
+.border-top {
+  border-top-color: var(--brades-warm-tan) !important;
+}
+
+.border-primary {
+  border-color: var(--brades-warm-tan) !important;
+}
+
+/* ============================================================
+   FOOTER — footer.bg-altlight
+   ============================================================ */
+
+footer.bg-altlight,
+footer.d-print-none {
+  background-color: var(--brades-near-black) !important;
+  color: var(--brades-warm-sand) !important;
+  border-top: 3px solid var(--brades-warm-tan) !important;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 0.85rem !important;
+}
+
+footer.bg-altlight a,
+footer.d-print-none a {
+  color: var(--brades-warm-tan) !important;
+}
+
+footer.bg-altlight a:hover,
+footer.d-print-none a:hover {
+  color: var(--brades-amber-gold) !important;
+}
+
+footer.bg-altlight p,
+footer.d-print-none p,
+footer.bg-altlight small,
+footer.d-print-none small {
+  color: var(--brades-warm-sand) !important;
+}
+
+/* ============================================================
+   PAGE WRAP
+   ============================================================ */
+
+.page-wrap {
+  background-color: var(--brades-off-white) !important;
+}
+
+/* ============================================================
+   BUTTONS
    ============================================================ */
 
 .btn,
 button,
-[class*="btn"],
+[class*="btn-"],
 input[type="submit"],
-input[type="button"],
-a.button {
+input[type="button"] {
   background-color: var(--brades-near-black) !important;
   color: var(--brades-off-white) !important;
   border: 1px solid var(--brades-warm-tan) !important;
@@ -115,65 +154,20 @@ a.button {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-weight: 400 !important;
   letter-spacing: 0.04em !important;
-  transition: background-color 0.2s ease, color 0.2s ease !important;
 }
 
 .btn:hover,
 button:hover,
-[class*="btn"]:hover,
+[class*="btn-"]:hover,
 input[type="submit"]:hover,
-a.button:hover {
+input[type="button"]:hover {
   background-color: var(--brades-warm-tan) !important;
   color: var(--brades-off-white) !important;
   border-color: var(--brades-warm-tan) !important;
 }
 
-/* Secondary / outlined button variant */
-.btn-secondary,
-.btn-outline,
-[class*="btn-secondary"],
-[class*="btn-outline"] {
-  background-color: transparent !important;
-  color: var(--brades-warm-tan) !important;
-  border: 1px solid var(--brades-warm-tan) !important;
-}
-
-.btn-secondary:hover,
-.btn-outline:hover {
-  background-color: var(--brades-warm-tan) !important;
-  color: var(--brades-off-white) !important;
-}
-
 /* ============================================================
-   CARDS / CONTENT PANELS
-   ============================================================ */
-
-.card,
-.panel,
-.tile,
-[class*="card"],
-[class*="panel"],
-[class*="tile"],
-.content-block {
-  background-color: var(--brades-warm-sand) !important;
-  border-top: 4px solid var(--brades-warm-tan) !important;
-  border-radius: 4px !important;
-  box-shadow: 0 2px 8px rgba(38, 38, 38, 0.08) !important;
-  color: var(--brades-near-black) !important;
-}
-
-.card h2,
-.card h3,
-.panel h2,
-.panel h3,
-[class*="card"] h2,
-[class*="card"] h3 {
-  font-family: 'EB Garamond', Garamond, Georgia, serif !important;
-  color: var(--brades-near-black) !important;
-}
-
-/* ============================================================
-   FORMS — LOGIN / REGISTER
+   FORMS
    ============================================================ */
 
 input[type="text"],
@@ -206,85 +200,38 @@ label {
 }
 
 /* ============================================================
-   FOOTER
+   CARDS / PANELS
    ============================================================ */
 
-footer,
-.footer,
-[class*="footer"] {
-  background-color: var(--brades-near-black) !important;
-  color: var(--brades-warm-sand) !important;
-  border-top: 3px solid var(--brades-warm-tan) !important;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-  font-size: 0.85rem !important;
-}
-
-footer a,
-.footer a {
-  color: var(--brades-warm-tan) !important;
-}
-
-footer a:hover,
-.footer a:hover {
-  color: var(--brades-amber-gold) !important;
+.card,
+.panel,
+[class*="card"],
+[class*="panel"] {
+  background-color: var(--brades-off-white) !important;
+  border-top: 4px solid var(--brades-warm-tan) !important;
+  border-radius: 4px !important;
 }
 
 /* ============================================================
-   DIVIDERS / HORIZONTAL RULES
-   ============================================================ */
-
-hr {
-  border: none !important;
-  border-top: 1px solid var(--brades-warm-tan) !important;
-  opacity: 0.5 !important;
-}
-
-/* ============================================================
-   ALERTS / NOTIFICATIONS
+   ALERTS
    ============================================================ */
 
 .alert,
-.notification,
-[class*="alert"],
-[class*="notification"] {
+[class*="alert"] {
   border-left: 4px solid var(--brades-warm-tan) !important;
   background-color: var(--brades-warm-sand) !important;
   color: var(--brades-near-black) !important;
-}
-
-.alert-success,
-[class*="alert-success"] {
-  border-left-color: #67AC54 !important;
-}
-
-.alert-warning,
-[class*="alert-warning"] {
-  border-left-color: var(--brades-amber-gold) !important;
-}
-
-.alert-danger,
-.alert-error,
-[class*="alert-danger"] {
-  border-left-color: #96213D !important;
 }
 
 /* ============================================================
    TABLES
    ============================================================ */
 
-table {
-  border-collapse: collapse !important;
-  width: 100% !important;
-}
-
-thead,
-th {
+thead, th {
   background-color: var(--brades-near-black) !important;
   color: var(--brades-off-white) !important;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-weight: 400 !important;
-  text-align: left !important;
-  padding: 10px 14px !important;
 }
 
 tbody tr:nth-child(odd) {
@@ -297,101 +244,37 @@ tbody tr:nth-child(even) {
 
 td {
   border-bottom: 1px solid var(--brades-warm-tan) !important;
-  padding: 9px 14px !important;
   color: var(--brades-near-black) !important;
 }
 
 /* ============================================================
-   VALUATION / PORTFOLIO SUMMARY ELEMENTS
+   DIVIDERS
    ============================================================ */
 
-.valuation,
-.portfolio-value,
-.summary-value,
-[class*="valuation"],
-[class*="portfolio"],
-[class*="summary"] {
-  font-family: 'EB Garamond', Garamond, Georgia, serif !important;
-  color: var(--brades-near-black) !important;
-  font-weight: 700 !important;
-}
-
-/* Key figures / monetary amounts */
-.amount,
-.value,
-.figure,
-[class*="amount"],
-[class*="value"],
-[class*="figure"] {
-  color: var(--brades-warm-tan) !important;
-  font-weight: 400 !important;
+hr {
+  border: none !important;
+  border-top: 1px solid var(--brades-warm-tan) !important;
+  opacity: 0.5 !important;
 }
 
 /* ============================================================
-   SIDEBAR / NAVIGATION MENU (logged-in state)
+   MODALS
    ============================================================ */
 
-.sidebar,
-.side-nav,
-aside,
-[class*="sidebar"],
-[class*="side-nav"] {
-  background-color: var(--brades-near-black) !important;
-  border-right: 1px solid var(--brades-warm-tan) !important;
-}
-
-.sidebar a,
-.side-nav a,
-aside a {
-  color: var(--brades-warm-sand) !important;
-}
-
-.sidebar a:hover,
-.side-nav a:hover,
-aside a:hover,
-.sidebar a.active,
-.side-nav a.active {
-  color: var(--brades-amber-gold) !important;
-  background-color: rgba(144, 118, 76, 0.15) !important;
-}
-
-/* ============================================================
-   MODAL / OVERLAY (e.g. App install, video modal)
-   ============================================================ */
-
-.modal,
-.overlay,
-[class*="modal"],
-[class*="overlay"] {
-  background-color: rgba(38, 38, 38, 0.85) !important;
-}
-
-.modal-content,
-.modal-body,
-[class*="modal-content"] {
+.modal-content {
   background-color: var(--brades-off-white) !important;
   border-top: 4px solid var(--brades-warm-tan) !important;
   border-radius: 4px !important;
 }
 
-.modal-header,
-[class*="modal-header"] {
+.modal-header {
   background-color: var(--brades-near-black) !important;
   color: var(--brades-off-white) !important;
   font-family: 'EB Garamond', Garamond, Georgia, serif !important;
 }
 
 /* ============================================================
-   MATERIAL ICONS (used by PFP for UI icons)
-   ============================================================ */
-
-.material-icons,
-[class*="material-icon"] {
-  color: var(--brades-warm-tan) !important;
-}
-
-/* ============================================================
-   UTILITY — SELECTION HIGHLIGHT
+   UTILITY
    ============================================================ */
 
 ::selection {
