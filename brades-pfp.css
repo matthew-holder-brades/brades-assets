@@ -1,0 +1,400 @@
+/* ============================================================
+   Brades Financial Management Limited
+   Personal Finance Portal — Custom Stylesheet
+   Applied to: brades.gb.pfp.net (Intelliflo PFP)
+   Brand: Built by Entrepreneurs, for Entrepreneurs
+   ============================================================ */
+
+/* --- Google Fonts import (web-safe Garamond & sans-serif fallback) --- */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap');
+
+/* --- Brades Colour Variables --- */
+:root {
+  --brades-off-white:   #FAF8F7;
+  --brades-warm-sand:   #E0D7D1;
+  --brades-warm-tan:    #90764C;
+  --brades-near-black:  #262626;
+  --brades-amber-gold:  #D3A820;
+  --brades-steel-blue:  #135988;
+  --brades-forest:      #102E11;
+  --brades-crimson:     #96213D;
+}
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+body {
+  background-color: var(--brades-off-white) !important;
+  color: var(--brades-near-black) !important;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'EB Garamond', Garamond, Georgia, serif !important;
+  color: var(--brades-near-black) !important;
+  font-weight: 700 !important;
+}
+
+a {
+  color: var(--brades-warm-tan) !important;
+}
+
+a:hover {
+  color: var(--brades-amber-gold) !important;
+  text-decoration: underline !important;
+}
+
+/* ============================================================
+   HEADER / NAVIGATION BAR
+   ============================================================ */
+
+header,
+.header,
+nav,
+.navbar,
+.nav-bar,
+[class*="header"],
+[class*="nav-"] {
+  background-color: var(--brades-near-black) !important;
+  border-bottom: 3px solid var(--brades-warm-tan) !important;
+}
+
+header a,
+nav a,
+.navbar a,
+.nav-bar a {
+  color: var(--brades-off-white) !important;
+}
+
+header a:hover,
+nav a:hover {
+  color: var(--brades-amber-gold) !important;
+}
+
+/* ============================================================
+   HERO / MAIN BANNER SECTION
+   ============================================================ */
+
+main,
+.main,
+.hero,
+[class*="hero"],
+.landing,
+.home-content,
+.page-header {
+  background-color: var(--brades-off-white) !important;
+}
+
+/* Main page heading ("Personal Finance Portal") */
+main h1,
+.hero h1,
+.landing h1,
+.page-header h1,
+h1.title {
+  font-family: 'EB Garamond', Garamond, Georgia, serif !important;
+  color: var(--brades-near-black) !important;
+  font-weight: 700 !important;
+}
+
+/* ============================================================
+   BUTTONS — PRIMARY (Login, Register, CTA)
+   ============================================================ */
+
+.btn,
+button,
+[class*="btn"],
+input[type="submit"],
+input[type="button"],
+a.button {
+  background-color: var(--brades-near-black) !important;
+  color: var(--brades-off-white) !important;
+  border: 1px solid var(--brades-warm-tan) !important;
+  border-radius: 3px !important;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.btn:hover,
+button:hover,
+[class*="btn"]:hover,
+input[type="submit"]:hover,
+a.button:hover {
+  background-color: var(--brades-warm-tan) !important;
+  color: var(--brades-off-white) !important;
+  border-color: var(--brades-warm-tan) !important;
+}
+
+/* Secondary / outlined button variant */
+.btn-secondary,
+.btn-outline,
+[class*="btn-secondary"],
+[class*="btn-outline"] {
+  background-color: transparent !important;
+  color: var(--brades-warm-tan) !important;
+  border: 1px solid var(--brades-warm-tan) !important;
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  background-color: var(--brades-warm-tan) !important;
+  color: var(--brades-off-white) !important;
+}
+
+/* ============================================================
+   CARDS / CONTENT PANELS
+   ============================================================ */
+
+.card,
+.panel,
+.tile,
+[class*="card"],
+[class*="panel"],
+[class*="tile"],
+.content-block {
+  background-color: var(--brades-warm-sand) !important;
+  border-top: 4px solid var(--brades-warm-tan) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 8px rgba(38, 38, 38, 0.08) !important;
+  color: var(--brades-near-black) !important;
+}
+
+.card h2,
+.card h3,
+.panel h2,
+.panel h3,
+[class*="card"] h2,
+[class*="card"] h3 {
+  font-family: 'EB Garamond', Garamond, Georgia, serif !important;
+  color: var(--brades-near-black) !important;
+}
+
+/* ============================================================
+   FORMS — LOGIN / REGISTER
+   ============================================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  background-color: #ffffff !important;
+  border: 1px solid var(--brades-warm-tan) !important;
+  border-radius: 3px !important;
+  color: var(--brades-near-black) !important;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-weight: 300 !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--brades-amber-gold) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(211, 168, 32, 0.2) !important;
+}
+
+label {
+  color: var(--brades-near-black) !important;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer,
+.footer,
+[class*="footer"] {
+  background-color: var(--brades-near-black) !important;
+  color: var(--brades-warm-sand) !important;
+  border-top: 3px solid var(--brades-warm-tan) !important;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 0.85rem !important;
+}
+
+footer a,
+.footer a {
+  color: var(--brades-warm-tan) !important;
+}
+
+footer a:hover,
+.footer a:hover {
+  color: var(--brades-amber-gold) !important;
+}
+
+/* ============================================================
+   DIVIDERS / HORIZONTAL RULES
+   ============================================================ */
+
+hr {
+  border: none !important;
+  border-top: 1px solid var(--brades-warm-tan) !important;
+  opacity: 0.5 !important;
+}
+
+/* ============================================================
+   ALERTS / NOTIFICATIONS
+   ============================================================ */
+
+.alert,
+.notification,
+[class*="alert"],
+[class*="notification"] {
+  border-left: 4px solid var(--brades-warm-tan) !important;
+  background-color: var(--brades-warm-sand) !important;
+  color: var(--brades-near-black) !important;
+}
+
+.alert-success,
+[class*="alert-success"] {
+  border-left-color: #67AC54 !important;
+}
+
+.alert-warning,
+[class*="alert-warning"] {
+  border-left-color: var(--brades-amber-gold) !important;
+}
+
+.alert-danger,
+.alert-error,
+[class*="alert-danger"] {
+  border-left-color: #96213D !important;
+}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+
+thead,
+th {
+  background-color: var(--brades-near-black) !important;
+  color: var(--brades-off-white) !important;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+  padding: 10px 14px !important;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--brades-off-white) !important;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--brades-warm-sand) !important;
+}
+
+td {
+  border-bottom: 1px solid var(--brades-warm-tan) !important;
+  padding: 9px 14px !important;
+  color: var(--brades-near-black) !important;
+}
+
+/* ============================================================
+   VALUATION / PORTFOLIO SUMMARY ELEMENTS
+   ============================================================ */
+
+.valuation,
+.portfolio-value,
+.summary-value,
+[class*="valuation"],
+[class*="portfolio"],
+[class*="summary"] {
+  font-family: 'EB Garamond', Garamond, Georgia, serif !important;
+  color: var(--brades-near-black) !important;
+  font-weight: 700 !important;
+}
+
+/* Key figures / monetary amounts */
+.amount,
+.value,
+.figure,
+[class*="amount"],
+[class*="value"],
+[class*="figure"] {
+  color: var(--brades-warm-tan) !important;
+  font-weight: 400 !important;
+}
+
+/* ============================================================
+   SIDEBAR / NAVIGATION MENU (logged-in state)
+   ============================================================ */
+
+.sidebar,
+.side-nav,
+aside,
+[class*="sidebar"],
+[class*="side-nav"] {
+  background-color: var(--brades-near-black) !important;
+  border-right: 1px solid var(--brades-warm-tan) !important;
+}
+
+.sidebar a,
+.side-nav a,
+aside a {
+  color: var(--brades-warm-sand) !important;
+}
+
+.sidebar a:hover,
+.side-nav a:hover,
+aside a:hover,
+.sidebar a.active,
+.side-nav a.active {
+  color: var(--brades-amber-gold) !important;
+  background-color: rgba(144, 118, 76, 0.15) !important;
+}
+
+/* ============================================================
+   MODAL / OVERLAY (e.g. App install, video modal)
+   ============================================================ */
+
+.modal,
+.overlay,
+[class*="modal"],
+[class*="overlay"] {
+  background-color: rgba(38, 38, 38, 0.85) !important;
+}
+
+.modal-content,
+.modal-body,
+[class*="modal-content"] {
+  background-color: var(--brades-off-white) !important;
+  border-top: 4px solid var(--brades-warm-tan) !important;
+  border-radius: 4px !important;
+}
+
+.modal-header,
+[class*="modal-header"] {
+  background-color: var(--brades-near-black) !important;
+  color: var(--brades-off-white) !important;
+  font-family: 'EB Garamond', Garamond, Georgia, serif !important;
+}
+
+/* ============================================================
+   MATERIAL ICONS (used by PFP for UI icons)
+   ============================================================ */
+
+.material-icons,
+[class*="material-icon"] {
+  color: var(--brades-warm-tan) !important;
+}
+
+/* ============================================================
+   UTILITY — SELECTION HIGHLIGHT
+   ============================================================ */
+
+::selection {
+  background-color: var(--brades-amber-gold) !important;
+  color: var(--brades-near-black) !important;
+}
