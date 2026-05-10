@@ -3,7 +3,7 @@
    Personal Finance Portal — Custom Stylesheet
    Applied to: brades.gb.pfp.net (Intelliflo PFP)
    Brand: Built by Entrepreneurs, for Entrepreneurs
-   Updated: class selectors confirmed via browser inspector
+   Updated: selectors confirmed via browser inspector v3
    ============================================================ */
 
 /* --- Google Fonts --- */
@@ -66,30 +66,63 @@ header.page-masthead a:hover {
 }
 
 /* ============================================================
-   MAIN CONTENT AREA — main#content
+   HERO SECTION — div.bg-altlight
+   This is the main landing area containing the page heading
+   ============================================================ */
+
+.bg-altlight {
+  background-color: var(--brades-steel-blue) !important;
+  color: var(--brades-off-white) !important;
+}
+
+.bg-altlight h1,
+.bg-altlight h2,
+.bg-altlight h3 {
+  font-family: 'EB Garamond', Garamond, Georgia, serif !important;
+  color: var(--brades-amber-gold) !important;
+  font-weight: 700 !important;
+}
+
+.bg-altlight p,
+.bg-altlight small,
+.bg-altlight span {
+  color: var(--brades-off-white) !important;
+}
+
+.bg-altlight a {
+  color: var(--brades-warm-sand) !important;
+}
+
+.bg-altlight a:hover {
+  color: var(--brades-amber-gold) !important;
+}
+
+/* ============================================================
+   BODY TEXT SECTION — div.bg-white
+   The lower content block with descriptive text
+   ============================================================ */
+
+.bg-white {
+  background-color: var(--brades-off-white) !important;
+}
+
+.bg-white p,
+.bg-white span {
+  color: var(--brades-near-black) !important;
+}
+
+/* ============================================================
+   MAIN CONTENT WRAPPER — main.flex-fill
    ============================================================ */
 
 main#content,
 main.flex-fill,
-main.background,
-main.flex-fill.background {
-  background-color: var(--brades-steel-blue) !important;
-}
-
-main#content h1,
-main.flex-fill h1 {
-  color: var(--brades-amber-gold) !important;
-  font-family: 'EB Garamond', Garamond, Georgia, serif !important;
-  font-weight: 700 !important;
-}
-
-main#content p,
-main.flex-fill p {
-  color: var(--brades-off-white) !important;
+main.background {
+  background-color: var(--brades-off-white) !important;
 }
 
 /* ============================================================
-   BORDER DIVIDER
+   BORDER DIVIDERS
    ============================================================ */
 
 .border-top {
@@ -100,8 +133,12 @@ main.flex-fill p {
   border-color: var(--brades-warm-tan) !important;
 }
 
+.border-top.border-primary {
+  border-top-color: var(--brades-warm-tan) !important;
+}
+
 /* ============================================================
-   FOOTER — footer.bg-altlight
+   FOOTER — footer.bg-altlight / footer.d-print-none
    ============================================================ */
 
 footer.bg-altlight,
@@ -164,6 +201,12 @@ input[type="button"]:hover {
   background-color: var(--brades-warm-tan) !important;
   color: var(--brades-off-white) !important;
   border-color: var(--brades-warm-tan) !important;
+}
+
+/* Buttons inside hero — slightly lighter border for contrast */
+.bg-altlight .btn,
+.bg-altlight button {
+  border-color: var(--brades-off-white) !important;
 }
 
 /* ============================================================
